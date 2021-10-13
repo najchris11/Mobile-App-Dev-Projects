@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.MainPage">
+    <TabbedPage.SelectedTabColor>White</TabbedPage.SelectedTabColor>
+    <TabbedPage.BarBackgroundColor>Orange</TabbedPage.BarBackgroundColor>
+    <ContentPage Title="Edit" Padding="0,40,0,0">
+        <ContentPage.Resources>
+            
+        </ContentPage.Resources>
+        <StackLayout>
+            
+            <Entry Placeholder="Name" x:Name="taskName"/>
+            <Entry Placeholder="Category" x:Name="catName"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Is this an Activity?"/>
+                <CheckBox x:Name="isActivity"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <DatePicker x:Name="date"/>
+                <Label Text="Time Expected"/>
+                <Picker x:Name="hoursP"/>
+                <Label Text=":"/>
+                <Picker x:Name="minsP"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Slider x:Name="Priority" Maximum="3" Minimum="0" MinimumWidthRequest="50"/>
+                <Label Text="{Binding Source=Priority, Path=Value, Mode=OneWay}"/>
+            </StackLayout>
+            
+            <Button Text="Save Task/Activity" Clicked="SubmitTasks"/>
+            <ListView x:Name="List">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding}" TextColor="Blue">
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Home" Padding="0,40,0,0">
+        <ContentPage.Resources>
+            
+        </ContentPage.Resources>
+        <StackLayout>
+            <Label x:Name="swLabel" FontSize="Header" HorizontalTextAlignment="Center"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Start" Clicked="SWStart"/>
+                <Button Text="Stop" Clicked="SWStop"/>
+                <Button Text="Complete Task" Clicked="SWEnd"/>
+            </StackLayout>
+            <ListView x:Name="taskSelect">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding}" TextColor="Blue">
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--<Button Text="Add New"/>-->
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Reports" Padding="0,40,0,0">
+        <ContentPage.Resources>
+            
+        </ContentPage.Resources>
+        <StackLayout>
+            <Label x:Name="Date" FontSize="Large"/>
+            <Label x:Name="Rating" FontSize="Medium"/>
+            <ListView x:Name="ratingList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding}" TextColor="Blue">
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton x:Name="leftButton" WidthRequest="100" VerticalOptions="Center" Clicked="leftButton_Clicked" />
+                <ImageButton x:Name="rightButton" WidthRequest="100" VerticalOptions="Center" Margin="200,0,0,0" Clicked="rightButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Settings" Padding="0,40,0,0">
+        <ContentPage.Resources>
+            
+        </ContentPage.Resources>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Hour Format"/>
+                <Switch x:Name="hourS" Toggled="hourS_Toggled" IsEnabled="False"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sounds On/Off"/>
+                <Switch x:Name="soundS" Toggled="soundS_Toggled"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

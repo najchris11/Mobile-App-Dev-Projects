@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridXAML.Page1">
+    <Page.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="TopNumList">0</x:String>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="WidthRequest" Value="250"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="0, 40, 0, 0" HeightRequest="700">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="{DynamicResource TopNumList}" Grid.Row="0"/>
+                <Button Text="0" Clicked="Button_Click" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <Button Text="1" Clicked="Button_Click" Grid.Row="4" Grid.Column="0"/>
+                <Button Text="2" Clicked="Button_Click" Grid.Row="4" Grid.Column="1"/>
+                <Button Text="3" Clicked="Button_Click" Grid.Row="4" Grid.Column="2"/>
+                <Button Text="4" Clicked="Button_Click" Grid.Row="3" Grid.Column="0"/>
+                <Button Text="5" Clicked="Button_Click" Grid.Row="3" Grid.Column="1"/>
+                <Button Text="6" Clicked="Button_Click" Grid.Row="3" Grid.Column="2"/>
+                <Button Text="7" Clicked="Button_Click" Grid.Row="2" Grid.Column="0"/>
+                <Button Text="8" Clicked="Button_Click" Grid.Row="2" Grid.Column="1"/>
+                <Button Text="9" Clicked="Button_Click" Grid.Row="2" Grid.Column="2"/>
+                <Button Text="Clear" Clicked="Button_Click" Grid.Row="5" Grid.Column="2"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GridXAML.MainPage">
+
+    <StackLayout>
+        <Grid Padding="0,40,0,0" HeightRequest="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="A" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" />
+            <Label Text="B" Grid.Row="0" Grid.Column="1" BackgroundColor="Blue" />
+            <Label Text="C" Grid.Row="0" Grid.Column="2" BackgroundColor="Green" />
+            <Label Text="D" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" BackgroundColor="Yellow" />
+            <Label Text="E" Grid.Row="1" Grid.Column="2" BackgroundColor="Orange" />
+            <Label Text="F" Grid.Row="2" Grid.Column="2" BackgroundColor="Pink" />
+            <Label Text="G" Grid.Row="3" Grid.Column="0" BackgroundColor="Cyan" />
+            <Label Text="H" Grid.Row="3" Grid.Column="1" BackgroundColor="Magenta" />
+            <Label Text="I" Grid.Row="3" Grid.Column="2" BackgroundColor="Bisque" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

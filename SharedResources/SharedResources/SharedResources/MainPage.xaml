@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SharedResources.MainPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ButtonTextColor">Blue</Color>
+            <Color x:Key="ButtonBGColor">Yellow</Color>
+            <x:Double x:Key="FontSize">30</x:Double>
+            <OnPlatform x:Key="LabelTextColor" x:TypeArguments="Color"
+                        Android="White"
+                        iOS="White"
+                        WinPhone="Blue" />
+            <OnPlatform x:Key="LabelBGColor" x:TypeArguments="Color"
+                        Android="Blue"
+                        iOS="Blue"
+                        WinPhone="White" />
+            <Style x:Key="MyButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Yellow"/>
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="BackgroundColor" Value="Yellow"/>
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <StackLayout Padding="0,40,0,0">
+        <Label Text="Hello" TextColor="{StaticResource LabelTextColor}"
+                           BackgroundColor="{StaticResource LabelBGColor}"
+                           FontSize="{StaticResource FontSize}"/>
+        <Label Text="World!" TextColor="{StaticResource LabelTextColor}"
+                            BackgroundColor="{StaticResource LabelBGColor}"
+                            FontSize="{StaticResource FontSize}"/>
+        <Button Text="Button1" BackgroundColor="{StaticResource ButtonBGColor}"  
+                             TextColor="{StaticResource ButtonTextColor}"/>
+        <Button Text="Button2" BackgroundColor="{StaticResource ButtonBGColor}"  
+                             TextColor="{StaticResource ButtonTextColor}"/>
+
+        <Button Text="Button3" Style="{StaticResource MyButtonStyle}"/>
+
+        <Button Text="Button4" BackgroundColor="{DynamicResource ButtonBGColor}"  
+                             TextColor="{DynamicResource ButtonTextColor}"
+                               Clicked="Button_Clicked"/>
+        <Button Text="Button5" BackgroundColor="{DynamicResource ButtonBGColor}"  
+                             TextColor="{DynamicResource ButtonTextColor}"
+                               Clicked="Button_Clicked"/>
+
+        <Picker WidthRequest="400" SelectedIndex="0">
+            <Picker.Items>
+                <x:String>Uno</x:String>
+                <x:String>Dos</x:String>
+                <x:String>Tres</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker WidthRequest="400" SelectedIndex="0">
+            <Picker.Items>
+                <x:String>Un</x:String>
+                <x:String>Deux</x:String>
+                <x:String>Trois</x:String>
+            </Picker.Items>
+        </Picker>
+    </StackLayout>
+</ContentPage>

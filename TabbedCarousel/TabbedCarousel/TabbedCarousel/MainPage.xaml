@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TabbedCarousel.MainPage">
+    <TabbedPage.SelectedTabColor>Blue</TabbedPage.SelectedTabColor>
+    <TabbedPage.BarBackgroundColor>White</TabbedPage.BarBackgroundColor>
+    <TabbedPage.UnselectedTabColor>Black</TabbedPage.UnselectedTabColor>
+    <ContentPage Title="Summary" Padding="0,40,0,0">
+        <StackLayout>
+            <Label x:Name="SummaryLabel" Text="Summary" />
+        </StackLayout>
+    </ContentPage>
+    <CarouselPage Title="Calendar" Padding="0,40,0,0">
+
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="January"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="February"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="March"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="April"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="May"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="June"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="July"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="August"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="September"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="October"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="November"/>
+        </ContentPage>
+        <ContentPage Padding="0,40,0,0">
+            <Label Text="December"/>
+        </ContentPage>
+
+    </CarouselPage>
+</TabbedPage>

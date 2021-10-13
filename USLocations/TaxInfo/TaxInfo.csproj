@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TaxInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="zipcodes.tsv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TaxInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="zipcodes.tsv" />
+  </ItemGroup>
+
+</Project>

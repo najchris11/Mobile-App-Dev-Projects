@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="NewCheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="PickerCell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>

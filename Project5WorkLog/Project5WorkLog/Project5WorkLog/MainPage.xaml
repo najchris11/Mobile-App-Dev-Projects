@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+            x:Class="Project5WorkLog.MainPage">
+
+    <TabbedPage.SelectedTabColor>Blue</TabbedPage.SelectedTabColor>
+    <TabbedPage.BarBackgroundColor>White</TabbedPage.BarBackgroundColor>
+    <TabbedPage.UnselectedTabColor>Black</TabbedPage.UnselectedTabColor>
+    <ContentPage Title="Activities" Padding="0,40,0,0">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name of Job"/>
+                <Entry x:Name="JobName" Placeholder="Enter name of Jobsite"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Odd Hours?"/>
+                <CheckBox x:Name="oddHours"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Date"/>
+                <DatePicker x:Name="date"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Time in Hours"/>
+                <Picker x:Name="hoursP"/>
+                <Label Text=":"/>
+                <Picker x:Name="minsP"/>
+            </StackLayout>
+            <ListView x:Name="activitiesList" ItemTapped="activitiesList_ItemTapped"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Add" Clicked="Button_Clicked"/>
+                <Button Text="Update" Clicked="Button_Clicked"/>
+                <Button Text="Delete" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Total" Padding="0,40,0,0">
+        <StackLayout>
+            <ListView x:Name="totalList" ItemSelected="totalList_ItemSelected"/>
+            <skia:SKCanvasView x:Name="view1" PaintSurface="OnCanvas1ViewPaintSurface"
+        HeightRequest="250" WidthRequest="500"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Settings" Padding="0,40,0,0">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Display Totals"/>
+                <Picker x:Name="settingsPicker" SelectedIndexChanged="settingsPicker_SelectedIndexChanged"/>
+            </StackLayout>
+            <Button Text="Credits" Clicked="Button_Clicked_1"/>
+        </StackLayout>
+    </ContentPage>
+
+</TabbedPage>

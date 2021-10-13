@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Graphics.MainPage">
+
+    <StackLayout Padding="0,40,0,0">
+        <Entry x:Name="RedBarEntry" TextChanged="RedBarEntry_TextChanged"/>
+        <Entry x:Name="BlueBarEntry" TextChanged="BlueBarEntry_TextChanged"/>
+        <!--<Label Text="Top"/>-->
+        <skia:SKCanvasView x:Name="view1" PaintSurface="OnCanvas1ViewPaintSurface"
+        HeightRequest="500" WidthRequest="500"/>
+            
+        <!--<Label Text="Middle"/>-->
+        <!--<skia:SKCanvasView x:Name="view2" PaintSurface="OnCanvas2ViewPaintSurface" 
+                           HeightRequest="160" WidthRequest="160">
+            --><!--<skia:SKCanvasView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnView2Tapped" />
+            </skia:SKCanvasView.GestureRecognizers>--><!--
+        </skia:SKCanvasView>-->
+        <!--<Label Text="Bottom"/>-->
+    </StackLayout>
+</ContentPage>

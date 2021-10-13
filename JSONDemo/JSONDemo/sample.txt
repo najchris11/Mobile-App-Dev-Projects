@@ -1,0 +1,14 @@
+﻿{
+	"fullname" : "Albert Einstein",
+	"dateofbirth" : "March 14, 1879",
+	"education" : [
+					{
+						"school" : "Federal polytechnic school",
+						"degree" : "BA"
+					},
+					{
+						"school" : "University of Zurich",
+						"degree" : "PhD"
+					}
+					]
+}

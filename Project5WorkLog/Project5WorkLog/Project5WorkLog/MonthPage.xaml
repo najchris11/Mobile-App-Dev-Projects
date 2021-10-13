@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="Project5WorkLog.MonthPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="totalList" ItemSelected="totalList_ItemSelected"/>
+            <skia:SKCanvasView x:Name="view1" PaintSurface="OnCanvas1ViewPaintSurface"
+        HeightRequest="250" WidthRequest="500"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
