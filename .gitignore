@@ -40,3 +40,52 @@ bin
 #data
 secrets.json
 packages
+
+# Binaries
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Packages
+packages/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Xamarin
+*.csproj.user
+*.zip
+*.apk
+*.ipa
+*.xap
+
+# Additional Xamarin specific
+Resource.designer.cs
+*.designer.cs
+*.Designer.cs
+
+# Debug files
+*.pdb
+*.mdb
+
+# Test Results
+TestResults/
+
+# Backup & temp files
+*~
+*.bak
+*.tmp
+*.temp
+
+# Cache files
+*.cache
+.xamarin/
+
+# Rider
+.idea/
